@@ -1,0 +1,16 @@
+JVM:         C:\pleiades\2025-06\java\21\bin\java.exe
+JVM Args:    
+Run Args:    "--task", "MERGE_MAPPING", "--left", "config/joined.tsrg", "--right", "C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\downloadClientMappings\client_mappings.txt", "--right-names", "right,left", "--classes", "--output", "C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\mergeMappings\output.jar"
+Classpath:   C:\Users\yuzut\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\installertools\1.2.0\installertools-1.2.0-fatjar.jar
+Working Dir: C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\mergeMappings
+Main Class:  net.minecraftforge.installertools.ConsoleTool
+Task: MERGE_MAPPING
+Left:    config\joined.tsrg
+         null
+Right:   C:\Users\yuzut\OneDrive\�f�X�N�g�b�v\hono\Gradle\projects\mcp\build\mcp\downloadClientMappings\client_mappings.txt
+         right,left
+Classes: true
+Fields:  false
+Methods: false
+Params:  false
+Output:  C:\Users\yuzut\OneDrive\�f�X�N�g�b�v\hono\Gradle\projects\mcp\build\mcp\mergeMappings\output.jar

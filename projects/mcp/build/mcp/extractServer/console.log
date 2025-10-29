@@ -1,0 +1,13 @@
+JVM:         C:\pleiades\2025-06\java\21\bin\java.exe
+JVM Args:    
+Run Args:    "--task", "bundler_extract", "--input", "C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\downloadServer\server.jar", "--output", "C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\extractServer\output.jar", "--jar-only"
+Classpath:   C:\Users\yuzut\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\installertools\1.3.2\installertools-1.3.2-fatjar.jar
+Working Dir: C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\extractServer
+Main Class:  net.minecraftforge.installertools.ConsoleTool
+Task: BUNDLER_EXTRACT
+Input:   C:\Users\yuzut\OneDrive\�f�X�N�g�b�v\hono\Gradle\projects\mcp\build\mcp\downloadServer\server.jar
+Output:  C:\Users\yuzut\OneDrive\�f�X�N�g�b�v\hono\Gradle\projects\mcp\build\mcp\extractServer\output.jar
+All:     false
+JarOnly: true
+Libs:    false
+Extracted: versions/1.21.3/server-1.21.3.jar

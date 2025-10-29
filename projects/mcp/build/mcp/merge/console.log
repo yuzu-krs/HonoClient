@@ -1,0 +1,6 @@
+JVM:         C:\pleiades\2025-06\java\21\bin\java.exe
+JVM Args:    
+Run Args:    "--client", "C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\stripClient\output.jar", "--server", "C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\stripServer\output.jar", "--ann", "1.21.3", "--output", "C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\merge\output.jar", "--inject", "false"
+Classpath:   C:\Users\yuzut\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\mergetool\1.2.3\mergetool-1.2.3-fatjar.jar
+Working Dir: C:\Users\yuzut\OneDrive\デスクトップ\hono\Gradle\projects\mcp\build\mcp\merge
+Main Class:  net.minecraftforge.mergetool.ConsoleMerger
