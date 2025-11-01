@@ -1,5 +1,18 @@
 package net.minecraft.client.renderer;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Locale;
+
+import javax.annotation.Nullable;
+
+import org.joml.Matrix4f;
+import org.joml.Matrix4fStack;
+import org.joml.Quaternionf;
+import org.joml.Vector3f;
+import org.slf4j.Logger;
+
 import com.mojang.blaze3d.ProjectionType;
 import com.mojang.blaze3d.platform.Lighting;
 import com.mojang.blaze3d.platform.NativeImage;
@@ -9,11 +22,8 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.logging.LogUtils;
 import com.mojang.math.Axis;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Locale;
-import javax.annotation.Nullable;
+
+import me.yuzu.hono.Hono;
 import net.minecraft.CrashReport;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.ReportedException;
@@ -63,11 +73,6 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import org.joml.Matrix4f;
-import org.joml.Matrix4fStack;
-import org.joml.Quaternionf;
-import org.joml.Vector3f;
-import org.slf4j.Logger;
 
 @OnlyIn(Dist.CLIENT)
 public class GameRenderer implements AutoCloseable {
@@ -186,6 +191,9 @@ public class GameRenderer implements AutoCloseable {
     }
 
     public void tick() {
+    	//Hono
+    	Hono.instance.modManager.onRender();
+    	
         this.tickFov();
         this.lightTexture.tick();
         if (this.minecraft.getCameraEntity() == null) {

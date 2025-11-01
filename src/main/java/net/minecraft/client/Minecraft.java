@@ -1,5 +1,37 @@
 package net.minecraft.client;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.lang.management.ManagementFactory;
+import java.net.Proxy;
+import java.net.SocketAddress;
+import java.nio.ByteBuffer;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+import java.util.MissingResourceException;
+import java.util.Queue;
+import java.util.Set;
+import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionStage;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+import javax.annotation.Nullable;
+
+import org.apache.commons.io.FileUtils;
+import org.lwjgl.util.tinyfd.TinyFileDialogs;
+import org.slf4j.Logger;
+
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Queues;
@@ -35,33 +67,8 @@ import com.mojang.jtracy.TracyClient;
 import com.mojang.logging.LogUtils;
 import com.mojang.realmsclient.client.RealmsClient;
 import com.mojang.realmsclient.gui.RealmsDataFetcher;
-import java.io.File;
-import java.io.IOException;
-import java.io.UncheckedIOException;
-import java.lang.management.ManagementFactory;
-import java.net.Proxy;
-import java.net.SocketAddress;
-import java.nio.ByteBuffer;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.time.Duration;
-import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import java.util.MissingResourceException;
-import java.util.Optional;
-import java.util.Queue;
-import java.util.Set;
-import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionStage;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
-import javax.annotation.Nullable;
+
+import me.yuzu.hono.Hono;
 import net.minecraft.ChatFormatting;
 import net.minecraft.CrashReport;
 import net.minecraft.CrashReportCategory;
@@ -152,7 +159,6 @@ import net.minecraft.client.resources.MobEffectTextureManager;
 import net.minecraft.client.resources.PaintingTextureManager;
 import net.minecraft.client.resources.SkinManager;
 import net.minecraft.client.resources.SplashManager;
-import net.minecraft.client.resources.language.ClientLanguage;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.client.resources.language.LanguageManager;
 import net.minecraft.client.resources.model.BakedModel;
@@ -177,7 +183,6 @@ import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.contents.KeybindResolver;
 import net.minecraft.network.protocol.game.ServerboundClientTickEndPacket;
 import net.minecraft.network.protocol.game.ServerboundPlayerActionPacket;
@@ -248,9 +253,6 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import org.apache.commons.io.FileUtils;
-import org.lwjgl.util.tinyfd.TinyFileDialogs;
-import org.slf4j.Logger;
 
 @OnlyIn(Dist.CLIENT)
 public class Minecraft extends ReentrantBlockableEventLoop<Runnable> implements WindowEventHandler {
@@ -645,6 +647,10 @@ public class Minecraft extends ReentrantBlockableEventLoop<Runnable> implements 
             this.gameLoadFinished = true;
             this.onGameLoadFinished(p_299693_);
         }
+
+        //Hono
+        Hono.instance.startClient();
+       
     }
 
     private void onGameLoadFinished(@Nullable Minecraft.GameLoadCookie p_300808_) {

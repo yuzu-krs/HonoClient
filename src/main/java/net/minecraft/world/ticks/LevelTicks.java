@@ -1,13 +1,5 @@
 package net.minecraft.world.ticks;
 
-import it.unimi.dsi.fastutil.longs.Long2LongMap;
-import it.unimi.dsi.fastutil.longs.Long2LongMaps;
-import it.unimi.dsi.fastutil.longs.Long2LongOpenHashMap;
-import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
-import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
-import it.unimi.dsi.fastutil.longs.Long2LongMap.Entry;
-import it.unimi.dsi.fastutil.objects.ObjectIterator;
-import it.unimi.dsi.fastutil.objects.ObjectOpenCustomHashSet;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -19,6 +11,16 @@ import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.LongPredicate;
 import java.util.function.Predicate;
+
+import it.unimi.dsi.fastutil.longs.Long2LongMap;
+import it.unimi.dsi.fastutil.longs.Long2LongMap.Entry;
+import it.unimi.dsi.fastutil.longs.Long2LongMaps;
+import it.unimi.dsi.fastutil.longs.Long2LongOpenHashMap;
+import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
+import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.objects.ObjectIterator;
+import it.unimi.dsi.fastutil.objects.ObjectOpenCustomHashSet;
+import me.yuzu.hono.Hono;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.SectionPos;
@@ -89,6 +91,9 @@ public class LevelTicks<T> implements LevelTickAccess<T> {
         profilerfiller.popPush("cleanup");
         this.cleanupAfterTick();
         profilerfiller.pop();
+        
+        //Hono
+        Hono.instance.onTick();
     }
 
     private void collectTicks(long p_193222_, int p_193223_, ProfilerFiller p_193224_) {

@@ -1,28 +1,279 @@
-[2910月2025 22:24:57.650] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
-[2910月2025 22:24:57.671] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
-[2910月2025 22:24:57.671] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
-[2910月2025 22:25:09.884] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 237 Datafixer optimizations took 2117 milliseconds
-[2910月2025 22:26:13.334] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[2910月2025 22:26:13.345] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Player924
-[2910月2025 22:26:14.009] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[2910月2025 22:26:21.395] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla
-[2910月2025 22:26:21.940] [Worker-Main-2/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[2910月2025 22:26:21.940] [Worker-Main-4/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[2910月2025 22:26:23.278] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.spawner.fall
-[2910月2025 22:26:23.340] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on ヘッドホン (Bose QC Headphones)
-[2910月2025 22:26:23.342] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[2910月2025 22:26:23.423] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[2910月2025 22:26:23.448] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[2910月2025 22:26:23.449] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[2910月2025 22:26:23.449] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[2910月2025 22:26:23.449] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[2910月2025 22:26:23.450] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[2910月2025 22:26:23.452] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[2910月2025 22:26:23.452] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[2910月2025 22:26:23.452] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[2910月2025 22:26:24.961] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[2910月2025 22:26:26.548] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[2910月2025 22:26:26.550] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[2910月2025 22:26:26.551] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[2910月2025 22:26:26.551] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[2910月2025 22:26:35.633] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[0111月2025 09:18:04.474] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
+[0111月2025 09:18:04.481] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[0111月2025 09:18:04.481] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[0111月2025 09:18:05.536] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 237 Datafixer optimizations took 283 milliseconds
+[0111月2025 09:18:11.104] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[0111月2025 09:18:11.120] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Player790
+[0111月2025 09:18:11.258] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[0111月2025 09:18:12.186] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla
+[0111月2025 09:18:12.363] [Worker-Main-14/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[0111月2025 09:18:12.536] [Worker-Main-2/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[0111月2025 09:18:13.408] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.spawner.fall
+[0111月2025 09:18:13.469] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on スピーカー (Senary Audio)
+[0111月2025 09:18:13.473] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[0111月2025 09:18:13.563] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[0111月2025 09:18:13.572] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[0111月2025 09:18:13.573] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[0111月2025 09:18:13.573] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[0111月2025 09:18:13.573] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[0111月2025 09:18:13.575] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[0111月2025 09:18:13.575] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[0111月2025 09:18:13.576] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[0111月2025 09:18:13.576] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[0111月2025 09:18:13.690] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[0111月2025 09:18:13.797] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[0111月2025 09:18:13.797] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[0111月2025 09:18:13.798] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[0111月2025 09:18:13.798] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[0111月2025 09:18:36.550] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1337 recipes
+[0111月2025 09:18:36.570] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1448 advancements
+[0111月2025 09:18:36.707] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.3
+[0111月2025 09:18:36.707] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[0111月2025 09:18:37.063] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[0111月2025 09:18:37.720] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: スポーン地点を準備中：0%
+[0111月2025 09:18:37.720] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: スポーン地点を準備中：0%
+[0111月2025 09:18:37.812] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 714 ms
+[0111月2025 09:18:37.906] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[0111月2025 09:18:37.907] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[0111月2025 09:18:37.993] [Render thread/DEBUG] [io.netty.channel.MultithreadEventLoopGroup/]: -Dio.netty.eventLoopThreads: 40
+[0111月2025 09:18:38.065] [Render thread/DEBUG] [io.netty.util.concurrent.GlobalEventExecutor/]: -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+[0111月2025 09:18:38.103] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[0111月2025 09:18:38.103] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[0111月2025 09:18:38.138] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
+[0111月2025 09:18:38.139] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 21
+[0111月2025 09:18:38.141] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
+[0111月2025 09:18:38.142] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
+[0111月2025 09:18:38.143] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.storeFence: available
+[0111月2025 09:18:38.144] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
+[0111月2025 09:18:38.145] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:289) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoop.<clinit>(NioEventLoop.java:84) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:182) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:38) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:60) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:49) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:59) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:87) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:82) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:69) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at net.minecraft.server.network.ServerConnectionListener.lambda$static$0(ServerConnectionListener.java:52) ~[main/:?]
+	at com.google.common.base.Suppliers$NonSerializableMemoizingSupplier.get(Suppliers.java:181) ~[guava-32.1.2-jre.jar:?]
+	at net.minecraft.server.network.ServerConnectionListener.startMemoryChannel(ServerConnectionListener.java:118) ~[main/:?]
+	at net.minecraft.client.Minecraft.doWorldLoad(Minecraft.java:1981) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldDoLoad(WorldOpenFlows.java:430) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckDiskSpace(WorldOpenFlows.java:425) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.lambda$openWorldLoadBundledResourcePack$16(WorldOpenFlows.java:388) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:97) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:754) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2223) ~[?:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadBundledResourcePack(WorldOpenFlows.java:386) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckWorldStemCompatibility(WorldOpenFlows.java:371) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelStem(WorldOpenFlows.java:363) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckVersionCompatibility(WorldOpenFlows.java:323) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelData(WorldOpenFlows.java:287) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorld(WorldOpenFlows.java:253) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:480) ~[main/:?]
+	at java.base/java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
+	at net.minecraft.client.gui.screens.worldselection.SelectWorldScreen.lambda$init$1(SelectWorldScreen.java:43) ~[main/:?]
+	at net.minecraft.client.gui.components.Button.onPress(Button.java:36) ~[main/:?]
+	at net.minecraft.client.gui.components.AbstractButton.onClick(AbstractButton.java:52) ~[main/:?]
+	at net.minecraft.client.gui.components.AbstractWidget.mouseClicked(AbstractWidget.java:142) ~[main/:?]
+	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:40) ~[main/:?]
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:101) ~[main/:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$2(MouseHandler.java:203) ~[main/:?]
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:97) ~[main/:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$3(MouseHandler.java:203) ~[main/:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) [lwjgl-glfw-3.3.3.jar:build 5]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar:build 5]
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) [lwjgl-glfw-3.3.3.jar:build 5]
+	at com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:133) [main/:?]
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:150) [main/:?]
+	at com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:294) [main/:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1243) [main/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:834) [main/:?]
+	at net.minecraft.client.main.Main.main(Main.java:238) [main/:?]
+[0111月2025 09:18:38.169] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
+[0111月2025 09:18:38.171] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @25d250c6
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:394) ~[?:?]
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:714) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:571) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:411) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:402) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoop.<clinit>(NioEventLoop.java:84) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:182) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:38) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:60) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:49) ~[netty-common-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:59) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:87) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:82) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:69) ~[netty-transport-4.1.97.Final.jar:4.1.97.Final]
+	at net.minecraft.server.network.ServerConnectionListener.lambda$static$0(ServerConnectionListener.java:52) ~[main/:?]
+	at com.google.common.base.Suppliers$NonSerializableMemoizingSupplier.get(Suppliers.java:181) ~[guava-32.1.2-jre.jar:?]
+	at net.minecraft.server.network.ServerConnectionListener.startMemoryChannel(ServerConnectionListener.java:118) ~[main/:?]
+	at net.minecraft.client.Minecraft.doWorldLoad(Minecraft.java:1981) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldDoLoad(WorldOpenFlows.java:430) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckDiskSpace(WorldOpenFlows.java:425) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.lambda$openWorldLoadBundledResourcePack$16(WorldOpenFlows.java:388) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:97) ~[main/:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:754) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2223) ~[?:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadBundledResourcePack(WorldOpenFlows.java:386) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckWorldStemCompatibility(WorldOpenFlows.java:371) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelStem(WorldOpenFlows.java:363) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldCheckVersionCompatibility(WorldOpenFlows.java:323) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorldLoadLevelData(WorldOpenFlows.java:287) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.openWorld(WorldOpenFlows.java:253) ~[main/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:480) ~[main/:?]
+	at java.base/java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
+	at net.minecraft.client.gui.screens.worldselection.SelectWorldScreen.lambda$init$1(SelectWorldScreen.java:43) ~[main/:?]
+	at net.minecraft.client.gui.components.Button.onPress(Button.java:36) ~[main/:?]
+	at net.minecraft.client.gui.components.AbstractButton.onClick(AbstractButton.java:52) ~[main/:?]
+	at net.minecraft.client.gui.components.AbstractWidget.mouseClicked(AbstractWidget.java:142) ~[main/:?]
+	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:40) ~[main/:?]
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:101) ~[main/:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$2(MouseHandler.java:203) ~[main/:?]
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:97) ~[main/:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$3(MouseHandler.java:203) ~[main/:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) [lwjgl-glfw-3.3.3.jar:build 5]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar:build 5]
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) [lwjgl-glfw-3.3.3.jar:build 5]
+	at com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:133) [main/:?]
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:150) [main/:?]
+	at com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:294) [main/:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1243) [main/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:834) [main/:?]
+	at net.minecraft.client.main.Main.main(Main.java:238) [main/:?]
+[0111月2025 09:18:38.173] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+[0111月2025 09:18:38.173] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
+[0111月2025 09:18:38.175] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 8522825728 bytes (maybe)
+[0111月2025 09:18:38.176] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\yuzut\AppData\Local\Temp (java.io.tmpdir)
+[0111月2025 09:18:38.176] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[0111月2025 09:18:38.177] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
+[0111月2025 09:18:38.178] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
+[0111月2025 09:18:38.178] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[0111月2025 09:18:38.180] [Render thread/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
+[0111月2025 09:18:38.181] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
+[0111月2025 09:18:38.182] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.noKeySetOptimization: false
+[0111月2025 09:18:38.182] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.selectorAutoRebuildThreshold: 512
+[0111月2025 09:18:38.194] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: org.jctools-core.MpscChunkedArrayQueue: available
+[0111月2025 09:18:38.215] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6d250192
+[0111月2025 09:18:38.218] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7052dd51
+[0111月2025 09:18:38.219] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@24cfe8ff
+[0111月2025 09:18:38.221] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5867f849
+[0111月2025 09:18:38.222] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@40222f3
+[0111月2025 09:18:38.223] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@625ccf77
+[0111月2025 09:18:38.224] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@390f4bd3
+[0111月2025 09:18:38.225] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5ecd590b
+[0111月2025 09:18:38.226] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4bcdfd9b
+[0111月2025 09:18:38.226] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4feea4e2
+[0111月2025 09:18:38.228] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@cfc2f1f
+[0111月2025 09:18:38.229] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@38cd2a8a
+[0111月2025 09:18:38.230] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@1cc8292d
+[0111月2025 09:18:38.230] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@263b57e2
+[0111月2025 09:18:38.231] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4b5200ed
+[0111月2025 09:18:38.232] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@1a9afa77
+[0111月2025 09:18:38.233] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@47462948
+[0111月2025 09:18:38.234] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3b3ef205
+[0111月2025 09:18:38.234] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6030c8e7
+[0111月2025 09:18:38.235] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2d34cfd4
+[0111月2025 09:18:38.236] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5bceaf53
+[0111月2025 09:18:38.237] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@17acc0f5
+[0111月2025 09:18:38.237] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@713d4517
+[0111月2025 09:18:38.238] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7afc7e8b
+[0111月2025 09:18:38.238] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@54e6f2b0
+[0111月2025 09:18:38.239] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@253c2bb1
+[0111月2025 09:18:38.239] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3e32d7fc
+[0111月2025 09:18:38.241] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@27a3ee97
+[0111月2025 09:18:38.241] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4433eba1
+[0111月2025 09:18:38.242] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@163135
+[0111月2025 09:18:38.242] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@28b39bfc
+[0111月2025 09:18:38.243] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@105c0f2b
+[0111月2025 09:18:38.244] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4b699062
+[0111月2025 09:18:38.245] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7ac78fa3
+[0111月2025 09:18:38.245] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4e9f877c
+[0111月2025 09:18:38.246] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3ecaecd3
+[0111月2025 09:18:38.246] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@39a791e8
+[0111月2025 09:18:38.248] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7fdbbbe8
+[0111月2025 09:18:38.249] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4d4d6708
+[0111月2025 09:18:38.249] [Render thread/TRACE] [io.netty.channel.nio.NioEventLoop/]: instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2408a606
+[0111月2025 09:18:38.267] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.processId: 25328 (auto-detected)
+[0111月2025 09:18:38.273] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv4Stack: false
+[0111月2025 09:18:38.273] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv6Addresses: false
+[0111月2025 09:18:38.279] [Render thread/DEBUG] [io.netty.util.NetUtilInitializations/]: Loopback interface: loopback_0 (Software Loopback Interface 1, 0:0:0:0:0:0:0:1)
+[0111月2025 09:18:38.281] [Render thread/DEBUG] [io.netty.util.NetUtil/]: Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[0111月2025 09:18:38.284] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.machineId: e8:c8:29:ff:fe:54:73:82 (auto-detected)
+[0111月2025 09:18:38.312] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 40
+[0111月2025 09:18:38.312] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 40
+[0111月2025 09:18:38.312] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
+[0111月2025 09:18:38.312] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 9
+[0111月2025 09:18:38.312] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 4194304
+[0111月2025 09:18:38.312] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
+[0111月2025 09:18:38.312] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
+[0111月2025 09:18:38.313] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[0111月2025 09:18:38.313] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[0111月2025 09:18:38.313] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[0111月2025 09:18:38.313] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: false
+[0111月2025 09:18:38.313] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[0111月2025 09:18:38.327] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
+[0111月2025 09:18:38.327] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
+[0111月2025 09:18:38.327] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[0111月2025 09:18:38.377] [Render thread/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxCapacityPerThread: 4096
+[0111月2025 09:18:38.377] [Render thread/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.ratio: 8
+[0111月2025 09:18:38.377] [Render thread/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.chunkSize: 32
+[0111月2025 09:18:38.377] [Render thread/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.blocking: false
+[0111月2025 09:18:38.377] [Render thread/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.batchFastThreadLocalOnly: true
+[0111月2025 09:18:38.386] [Netty Local Client IO #0/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
+[0111月2025 09:18:38.386] [Netty Local Client IO #0/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
+[0111月2025 09:18:38.387] [Netty Local Client IO #0/DEBUG] [io.netty.util.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1209641c
+[0111月2025 09:18:38.712] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Player790[local:E:4f57b2f2] logged in with entity id 42 at (-29.23350969995929, 80.25220334025373, -60.91639093670784)
+[0111月2025 09:18:38.763] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Player790がゲームに参加しました
+[0111月2025 09:18:38.965] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2 advancements
+[0111月2025 09:18:57.542] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Player790は高い所から落ちた
+[0111月2025 09:18:57.560] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Player790は高い所から落ちた
+[0111月2025 09:19:17.690] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Player790は高い所から落ちた
+[0111月2025 09:19:17.706] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Player790は高い所から落ちた
+[0111月2025 09:19:31.190] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Player790は高い所から落ちた
+[0111月2025 09:19:31.208] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Player790は高い所から落ちた
+[0111月2025 09:19:49.212] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[0111月2025 09:19:49.234] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[0111月2025 09:19:49.259] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[0111月2025 09:19:49.260] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[0111月2025 09:20:30.216] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Player790は高い所から落ちた
+[0111月2025 09:20:30.228] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Player790は高い所から落ちた
+[0111月2025 09:20:43.662] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[0111月2025 09:20:43.671] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[0111月2025 09:20:43.682] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[0111月2025 09:20:43.683] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[0111月2025 09:20:46.130] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[0111月2025 09:20:46.166] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Player790 lost connection: 切断されました
+[0111月2025 09:20:46.167] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Player790がゲームを退出しました
+[0111月2025 09:20:46.176] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
+[0111月2025 09:20:46.213] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[0111月2025 09:20:46.213] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[0111月2025 09:20:46.213] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[0111月2025 09:20:46.238] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[0111月2025 09:20:46.298] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[0111月2025 09:20:46.299] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[0111月2025 09:20:46.304] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[0111月2025 09:20:46.304] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[0111月2025 09:20:46.304] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[0111月2025 09:20:46.304] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
