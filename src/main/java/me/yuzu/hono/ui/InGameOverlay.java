@@ -60,6 +60,12 @@ public class InGameOverlay {
 		for(int i=0;i<enabledMods.size();i++) {
 			me.yuzu.hono.module.Module mod=enabledMods.get(i);
 			String modName=mod.getName();
+			
+			if(mod.getName().equalsIgnoreCase("ClickGui")) {
+				continue;
+			}
+			
+			
 			int modNameWidth=mc.font.width(modName);
 			
 			int rainbowColor=RainbowUtil.getRainbowColor(i*0.1f);

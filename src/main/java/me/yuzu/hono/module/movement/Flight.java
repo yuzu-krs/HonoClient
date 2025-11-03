@@ -40,6 +40,12 @@ public class Flight extends Module{
         }
     }
 
+	@Override
+	public void setOptions() {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
 
 }
 

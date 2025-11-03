@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import me.yuzu.hono.module.gui.ClickGui;
 import me.yuzu.hono.module.movement.Flight;
 
 
@@ -24,6 +25,7 @@ public class ModuleManager {
         // Render
         // Misc
         // Gui
+    	addMod(new ClickGui());
     }
 
     public void addMod(Module module) {

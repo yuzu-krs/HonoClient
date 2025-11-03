@@ -1,0 +1,139 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 2025-11-03 16:36:35
+Description: Rendering screen
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.client.Minecraft.getWindow()" because "this.mc" is null
+	at me.yuzu.hono.ui.clickgui.GuiCategory.render(GuiCategory.java:47)
+	at me.yuzu.hono.ui.clickgui.ClickGuiMain.render(ClickGuiMain.java:64)
+	at net.minecraft.client.gui.screens.Screen.renderWithTooltip(Screen.java:111)
+	at net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:510)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1225)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:834)
+	at net.minecraft.client.main.Main.main(Main.java:238)
+	at mcp.client.Start.main(Start.java:17)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at me.yuzu.hono.ui.clickgui.GuiCategory.render(GuiCategory.java:47)
+	at me.yuzu.hono.ui.clickgui.ClickGuiMain.render(ClickGuiMain.java:64)
+	at net.minecraft.client.gui.screens.Screen.renderWithTooltip(Screen.java:111)
+
+-- Screen render details --
+Details:
+	Screen name: me.yuzu.hono.ui.clickgui.ClickGuiMain
+	Mouse location: Scaled: (284, 46). Absolute: (2273.000000, 373.000000)
+	Screen size: Scaled: (480, 253). Absolute: (3840, 2019). Scale factor of 8.000000
+Stacktrace:
+	at net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:510)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1225)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:834)
+	at net.minecraft.client.main.Main.main(Main.java:238)
+	at mcp.client.Start.main(Start.java:17)
+
+-- Uptime --
+Details:
+	JVM uptime: 51.026s
+	Wall uptime: 42.818s
+	High-res time: 42.463s
+	Client ticks: 738 ticks / 36.900s
+Stacktrace:
+	at net.minecraft.client.Minecraft.fillReport(Minecraft.java:2270)
+	at net.minecraft.client.Minecraft.emergencySaveAndCrash(Minecraft.java:898)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:854)
+	at net.minecraft.client.main.Main.main(Main.java:238)
+	at mcp.client.Start.main(Start.java:17)
+
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['Player249'/23, l='ClientLevel', x=130.92, y=115.00, z=112.61]]
+	Chunk stats: 961, 376
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,91,0), Section: (at 0,11,0 in 0,5,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 115497 game time, 8734 day time
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+	Tracked entity count: 189
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.3
+	Minecraft Version ID: 1.21.3
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.7, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 5118702760 bytes (4881 MiB) / 7516192768 bytes (7168 MiB) up to 7516192768 bytes (7168 MiB)
+	CPUs: 20
+	Processor Vendor: GenuineIntel
+	Processor Name: 13th Gen Intel(R) Core(TM) i7-13650HX
+	Identifier: Intel64 Family 6 Model 183 Stepping 1
+	Microarchitecture: Raptor Lake
+	Frequency (GHz): 2.80
+	Number of physical packages: 1
+	Number of physical CPUs: 14
+	Number of logical CPUs: 20
+	Graphics card #0 name: Intel(R) UHD Graphics
+	Graphics card #0 vendor: Intel Corporation
+	Graphics card #0 VRAM (MiB): 128.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 31.0.101.5445
+	Graphics card #1 name: NVIDIA GeForce RTX 4060 Laptop GPU
+	Graphics card #1 vendor: NVIDIA
+	Graphics card #1 VRAM (MiB): 8188.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.15.7283
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 4.80
+	Memory slot #0 type: Unknown
+	Memory slot #1 capacity (MiB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 4.80
+	Memory slot #1 type: Unknown
+	Virtual memory max (MiB): 50682.64
+	Virtual memory used (MiB): 49207.05
+	Swap memory total (MiB): 18174.58
+	Swap memory used (MiB): 1009.49
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 321878.00, total: 974437.00
+	Space in storage for workdir (MiB): available: 321878.00, total: 974437.00
+	JVM Flags: 3 total; -XX:+ShowCodeDetailsInExceptionMessages -Xmx7G -Xms7G
+	Launched Version: mcp
+	Backend library: LWJGL version 3.3.3+5
+	Backend API: NVIDIA GeForce RTX 4060 Laptop GPU/PCIe/SSE2 GL version 3.2.0 NVIDIA 572.83, NVIDIA Corporation
+	Window size: 3840x2019
+	GFLW Platform: win32
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Is Modded: Very likely; Client jar signature invalidated; Server jar signature invalidated
+	Universe: 400921fb54442d18
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fast
+	Render Distance: 12/12 chunks
+	Resource Packs: vanilla
+	Current Language: ja_jp
+	Locale: ja_JP
+	System encoding: MS932
+	File encoding: UTF-8
+	CPU: 20x 13th Gen Intel(R) Core(TM) i7-13650HX
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Player249'/23, l='ServerLevel[New World]', x=130.92, y=115.00, z=112.61]]
+	Active Data Packs: vanilla
+	Available Data Packs: minecart_improvements, redstone_experiments, trade_rebalance, vanilla, winter_drop
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: -6613717636876353659
+	Suppressed Exceptions: ~~NONE~~
