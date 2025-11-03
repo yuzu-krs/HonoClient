@@ -1,1 +1,4 @@
 /gamemode survival
+/time set day
+/weather
+/weather clear

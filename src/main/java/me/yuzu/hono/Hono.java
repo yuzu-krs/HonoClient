@@ -2,6 +2,7 @@ package me.yuzu.hono;
 
 import me.yuzu.hono.module.KeyManager;
 import me.yuzu.hono.module.ModuleManager;
+import me.yuzu.hono.ui.InGameOverlay;
 import net.minecraft.client.gui.GuiGraphics;
 
 public class Hono {
@@ -13,26 +14,24 @@ public class Hono {
 	  // モジュールやキー入力のマネージャー
     public static ModuleManager modManager;
     public static KeyManager keyManager;
+    public static InGameOverlay ingameoverlay;
 
     // クライアント起動時に呼ばれる初期化メソッド
     public static void startClient() {
         // 各マネージャーを初期化
         modManager = new ModuleManager();
         keyManager = new KeyManager();
+        ingameoverlay=new InGameOverlay();
     }
 
     // 毎フレーム（tickごと）に呼ばれる処理
     public static void onTick() {
-        // モジュールの更新とキー入力チェックを行う
-        if (modManager != null && keyManager != null) {
-            modManager.onTick(keyManager);
-        }
+    	modManager.onTick(keyManager);
     }
 
     // 画面描画時に呼ばれるメソッド
     public void onRender(GuiGraphics guiGraphics) {
-
-
+    	ingameoverlay.render(guiGraphics);
     }
 	
 		
