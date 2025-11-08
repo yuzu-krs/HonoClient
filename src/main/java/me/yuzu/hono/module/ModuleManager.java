@@ -6,9 +6,10 @@ import java.util.stream.Collectors;
 
 import me.yuzu.hono.module.gui.ClickGui;
 import me.yuzu.hono.module.movement.Flight;
+import me.yuzu.hono.module.movement.Jesus;
+import me.yuzu.hono.module.movement.NoFall;
 import me.yuzu.hono.module.player.AntiAFK;
 import me.yuzu.hono.module.player.AutoRespawn;
-import me.yuzu.hono.module.player.NoFall;
 
 
 public class ModuleManager {
@@ -28,6 +29,7 @@ public class ModuleManager {
     	addMod(new AutoRespawn());
     	addMod(new AntiAFK());
     	addMod(new NoFall());
+    	addMod(new Jesus());
     	
         // Render
         // Misc

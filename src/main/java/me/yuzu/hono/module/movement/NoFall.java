@@ -1,4 +1,4 @@
-package me.yuzu.hono.module.player;
+package me.yuzu.hono.module.movement;
 
 
 import me.yuzu.hono.module.Category;
