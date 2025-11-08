@@ -1,6 +1,4 @@
 package me.yuzu.hono.module.movement;
-import org.lwjgl.glfw.GLFW;
-
 import me.yuzu.hono.module.Category;
 import me.yuzu.hono.module.Module;
 public class Flight extends Module{
@@ -8,7 +6,7 @@ public class Flight extends Module{
 
     public Flight() {
         // 親クラス (Module) のコンストラクタを呼ぶ（これが必ず最初）
-        super("Flight", "Enables creative flight in survival", Category.MOVEMENT, GLFW.GLFW_KEY_F);
+        super("Flight", "Enables creative flight in survival", Category.MOVEMENT,0);
     }
 
     @Override

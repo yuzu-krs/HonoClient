@@ -2,3 +2,4 @@
 /time set day
 /weather
 /weather clear
+/time set day
