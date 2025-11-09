@@ -3,3 +3,4 @@
 /weather
 /weather clear
 /time set day
+/weather clear

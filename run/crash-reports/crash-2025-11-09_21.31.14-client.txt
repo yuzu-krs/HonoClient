@@ -1,0 +1,168 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 2025-11-09 21:31:14
+Description: Ticking entity
+
+java.lang.NullPointerException: Cannot invoke "me.yuzu.hono.ui.clickgui.options.CheckBox.isChecked()" because "this.targetPlayers" is null
+	at me.yuzu.hono.module.combat.KillAura.getClosestTarget(KillAura.java:41)
+	at me.yuzu.hono.module.combat.KillAura.onUpdate(KillAura.java:25)
+	at me.yuzu.hono.module.ModuleManager.onTick(ModuleManager.java:97)
+	at me.yuzu.hono.Hono.onTick(Hono.java:29)
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2488)
+	at net.minecraft.world.entity.player.Player.tick(Player.java:276)
+	at net.minecraft.client.player.AbstractClientPlayer.tick(AbstractClientPlayer.java:61)
+	at net.minecraft.client.player.LocalPlayer.tick(LocalPlayer.java:202)
+	at net.minecraft.client.multiplayer.ClientLevel.tickNonPassenger(ClientLevel.java:277)
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:520)
+	at net.minecraft.client.multiplayer.ClientLevel.lambda$4(ClientLevel.java:257)
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53)
+	at net.minecraft.client.multiplayer.ClientLevel.tickEntities(ClientLevel.java:255)
+	at net.minecraft.client.Minecraft.tick(Minecraft.java:1730)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1191)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:834)
+	at net.minecraft.client.main.Main.main(Main.java:238)
+	at mcp.client.Start.main(Start.java:17)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at me.yuzu.hono.module.combat.KillAura.getClosestTarget(KillAura.java:41)
+	at me.yuzu.hono.module.combat.KillAura.onUpdate(KillAura.java:25)
+	at me.yuzu.hono.module.ModuleManager.onTick(ModuleManager.java:97)
+	at me.yuzu.hono.Hono.onTick(Hono.java:29)
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2488)
+	at net.minecraft.world.entity.player.Player.tick(Player.java:276)
+	at net.minecraft.client.player.AbstractClientPlayer.tick(AbstractClientPlayer.java:61)
+	at net.minecraft.client.player.LocalPlayer.tick(LocalPlayer.java:202)
+	at net.minecraft.client.multiplayer.ClientLevel.tickNonPassenger(ClientLevel.java:277)
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:520)
+	at net.minecraft.client.multiplayer.ClientLevel.lambda$4(ClientLevel.java:257)
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53)
+	at net.minecraft.client.multiplayer.ClientLevel.tickEntities(ClientLevel.java:255)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.client.player.LocalPlayer)
+	Entity ID: 19
+	Entity Name: Player24
+	Entity's Exact location: 407.46, 89.00, -700.89
+	Entity's Block location: World: (407,89,-701), Section: (at 7,9,3 in 25,5,-44; chunk contains blocks 400,-64,-704 to 415,319,-689), Region: (0,-2; contains chunks 0,-64 to 31,-33, blocks 0,-64,-1024 to 511,319,-513)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:520)
+	at net.minecraft.client.multiplayer.ClientLevel.lambda$4(ClientLevel.java:257)
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53)
+	at net.minecraft.client.multiplayer.ClientLevel.tickEntities(ClientLevel.java:255)
+	at net.minecraft.client.Minecraft.tick(Minecraft.java:1730)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1191)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:834)
+	at net.minecraft.client.main.Main.main(Main.java:238)
+	at mcp.client.Start.main(Start.java:17)
+
+-- Uptime --
+Details:
+	JVM uptime: 82.800s
+	Wall uptime: 77.007s
+	High-res time: 74.695s
+	Client ticks: 980 ticks / 49.000s
+Stacktrace:
+	at net.minecraft.client.Minecraft.fillReport(Minecraft.java:2270)
+	at net.minecraft.client.Minecraft.emergencySaveAndCrash(Minecraft.java:898)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:854)
+	at net.minecraft.client.main.Main.main(Main.java:238)
+	at mcp.client.Start.main(Start.java:17)
+
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['Player24'/19, l='ClientLevel', x=407.46, y=89.00, z=-700.89]]
+	Chunk stats: 961, 609
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,91,0), Section: (at 0,11,0 in 0,5,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 191886 game time, 33525 day time
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+	Tracked entity count: 156
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.3
+	Minecraft Version ID: 1.21.3
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.7, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 4424053504 bytes (4219 MiB) / 7516192768 bytes (7168 MiB) up to 7516192768 bytes (7168 MiB)
+	CPUs: 20
+	Processor Vendor: GenuineIntel
+	Processor Name: 13th Gen Intel(R) Core(TM) i7-13650HX
+	Identifier: Intel64 Family 6 Model 183 Stepping 1
+	Microarchitecture: Raptor Lake
+	Frequency (GHz): 2.80
+	Number of physical packages: 1
+	Number of physical CPUs: 14
+	Number of logical CPUs: 20
+	Graphics card #0 name: Intel(R) UHD Graphics
+	Graphics card #0 vendor: Intel Corporation
+	Graphics card #0 VRAM (MiB): 128.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 31.0.101.5445
+	Graphics card #1 name: NVIDIA GeForce RTX 4060 Laptop GPU
+	Graphics card #1 vendor: NVIDIA
+	Graphics card #1 VRAM (MiB): 8188.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.15.7283
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 4.80
+	Memory slot #0 type: Unknown
+	Memory slot #1 capacity (MiB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 4.80
+	Memory slot #1 type: Unknown
+	Virtual memory max (MiB): 40444.06
+	Virtual memory used (MiB): 37232.76
+	Swap memory total (MiB): 7936.00
+	Swap memory used (MiB): 252.79
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 352831.56, total: 974437.00
+	Space in storage for workdir (MiB): available: 352831.56, total: 974437.00
+	JVM Flags: 3 total; -XX:+ShowCodeDetailsInExceptionMessages -Xmx7G -Xms7G
+	Launched Version: mcp
+	Backend library: LWJGL version 3.3.3+5
+	Backend API: NVIDIA GeForce RTX 4060 Laptop GPU/PCIe/SSE2 GL version 3.2.0 NVIDIA 572.83, NVIDIA Corporation
+	Window size: 2560x1334
+	GFLW Platform: win32
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Is Modded: Very likely; Client jar signature invalidated; Server jar signature invalidated
+	Universe: 400921fb54442d18
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fast
+	Render Distance: 12/12 chunks
+	Resource Packs: vanilla
+	Current Language: ja_jp
+	Locale: ja_JP
+	System encoding: MS932
+	File encoding: UTF-8
+	CPU: 20x 13th Gen Intel(R) Core(TM) i7-13650HX
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Player24'/19, l='ServerLevel[New World]', x=407.46, y=89.00, z=-700.89]]
+	Active Data Packs: vanilla
+	Available Data Packs: minecart_improvements, redstone_experiments, trade_rebalance, vanilla, winter_drop
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: -6613717636876353659
+	Suppressed Exceptions: ~~NONE~~

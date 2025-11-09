@@ -1,0 +1,111 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 2025-11-09 21:31:48
+Description: Exception ticking world
+
+java.lang.NullPointerException: Cannot invoke "me.yuzu.hono.ui.clickgui.options.CheckBox.isChecked()" because "this.targetPlayers" is null
+	at me.yuzu.hono.module.combat.KillAura.getClosestTarget(KillAura.java:41)
+	at me.yuzu.hono.module.combat.KillAura.onUpdate(KillAura.java:25)
+	at me.yuzu.hono.module.ModuleManager.onTick(ModuleManager.java:97)
+	at me.yuzu.hono.Hono.onTick(Hono.java:29)
+	at net.minecraft.world.ticks.LevelTicks.tick(LevelTicks.java:96)
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:352)
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1058)
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:946)
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:106)
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:711)
+	at net.minecraft.server.MinecraftServer.lambda$2(MinecraftServer.java:278)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at me.yuzu.hono.module.combat.KillAura.getClosestTarget(KillAura.java:41)
+	at me.yuzu.hono.module.combat.KillAura.onUpdate(KillAura.java:25)
+	at me.yuzu.hono.module.ModuleManager.onTick(ModuleManager.java:97)
+	at me.yuzu.hono.Hono.onTick(Hono.java:29)
+	at net.minecraft.world.ticks.LevelTicks.tick(LevelTicks.java:96)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayer['Player781'/19, l='ServerLevel[New World]', x=413.63, y=88.00, z=-688.54]]
+	Chunk stats: 3442
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,91,0), Section: (at 0,11,0 in 0,5,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 192043 game time, 33682 day time
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Commands: true
+	Level weather: Rain time: 13525 (now: true), thunder time: 6944 (now: true)
+	Known server brands: vanilla
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+	Loaded entity count: 298
+Stacktrace:
+	at net.minecraft.server.level.ServerLevel.fillReportDetails(ServerLevel.java:1684)
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1061)
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:946)
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:106)
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:711)
+	at net.minecraft.server.MinecraftServer.lambda$2(MinecraftServer.java:278)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.3
+	Minecraft Version ID: 1.21.3
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.7, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 6798682208 bytes (6483 MiB) / 7516192768 bytes (7168 MiB) up to 7516192768 bytes (7168 MiB)
+	CPUs: 20
+	Processor Vendor: GenuineIntel
+	Processor Name: 13th Gen Intel(R) Core(TM) i7-13650HX
+	Identifier: Intel64 Family 6 Model 183 Stepping 1
+	Microarchitecture: Raptor Lake
+	Frequency (GHz): 2.80
+	Number of physical packages: 1
+	Number of physical CPUs: 14
+	Number of logical CPUs: 20
+	Graphics card #0 name: Intel(R) UHD Graphics
+	Graphics card #0 vendor: Intel Corporation
+	Graphics card #0 VRAM (MiB): 128.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 31.0.101.5445
+	Graphics card #1 name: NVIDIA GeForce RTX 4060 Laptop GPU
+	Graphics card #1 vendor: NVIDIA
+	Graphics card #1 VRAM (MiB): 8188.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.15.7283
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 4.80
+	Memory slot #0 type: Unknown
+	Memory slot #1 capacity (MiB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 4.80
+	Memory slot #1 type: Unknown
+	Virtual memory max (MiB): 40444.06
+	Virtual memory used (MiB): 37085.83
+	Swap memory total (MiB): 7936.00
+	Swap memory used (MiB): 252.79
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 352832.19, total: 974437.00
+	Space in storage for workdir (MiB): available: 352832.19, total: 974437.00
+	JVM Flags: 3 total; -XX:+ShowCodeDetailsInExceptionMessages -Xmx7G -Xms7G
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Player781'/19, l='ServerLevel[New World]', x=413.63, y=88.00, z=-688.54]]
+	Active Data Packs: vanilla
+	Available Data Packs: minecart_improvements, redstone_experiments, trade_rebalance, vanilla, winter_drop
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: -6613717636876353659
+	Suppressed Exceptions: ~~NONE~~
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Client jar signature invalidated; Server jar signature invalidated
+	Launched Version: mcp

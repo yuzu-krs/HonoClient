@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import me.yuzu.hono.module.combat.KillAura;
+import me.yuzu.hono.module.combat.Triggerbot;
 import me.yuzu.hono.module.gui.ClickGui;
 import me.yuzu.hono.module.movement.AutoSprint;
 import me.yuzu.hono.module.movement.Flight;
@@ -21,8 +23,8 @@ public class ModuleManager {
     	modules=new ArrayList();
         
     	// Combat
-        
-    	
+        addMod(new Triggerbot());
+    	addMod(new KillAura());
     	// Movement
     	addMod(new Flight());
     	
