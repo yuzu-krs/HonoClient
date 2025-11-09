@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import me.yuzu.hono.module.gui.ClickGui;
+import me.yuzu.hono.module.movement.AutoSprint;
 import me.yuzu.hono.module.movement.Flight;
 import me.yuzu.hono.module.movement.Jesus;
 import me.yuzu.hono.module.movement.NoFall;
@@ -30,6 +31,7 @@ public class ModuleManager {
     	addMod(new AntiAFK());
     	addMod(new NoFall());
     	addMod(new Jesus());
+    	addMod(new AutoSprint());
     	
         // Render
         // Misc

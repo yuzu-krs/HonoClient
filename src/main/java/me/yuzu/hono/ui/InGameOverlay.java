@@ -70,7 +70,7 @@ public class InGameOverlay {
 			
 			int rainbowColor=RainbowUtil.getRainbowColor(i*0.1f);
 			
-			guiGraphics.drawString(mc.font, "- " + modName,screenWidth-50,yOffset,rainbowColor);
+			guiGraphics.drawString(mc.font, "- " + modName,screenWidth-80,yOffset,rainbowColor);
 
 			yOffset += mc.font.lineHeight+2;
 			
