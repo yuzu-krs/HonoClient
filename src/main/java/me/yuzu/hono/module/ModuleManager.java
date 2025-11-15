@@ -13,6 +13,7 @@ import me.yuzu.hono.module.movement.Jesus;
 import me.yuzu.hono.module.movement.NoFall;
 import me.yuzu.hono.module.player.AntiAFK;
 import me.yuzu.hono.module.player.AutoRespawn;
+import me.yuzu.hono.module.player.BedBreaker;
 
 
 public class ModuleManager {
@@ -34,6 +35,7 @@ public class ModuleManager {
     	addMod(new NoFall());
     	addMod(new Jesus());
     	addMod(new AutoSprint());
+    	addMod(new BedBreaker());
     	
         // Render
         // Misc
